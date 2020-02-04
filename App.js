@@ -1,5 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  Platform,
+  StatusBar
+} from "react-native";
 
 import iconHome from "./icon/home-active.png";
 import iconOrder from "./icon/order.png";
@@ -7,10 +15,50 @@ import iconHelp from "./icon/help.png";
 import iconInbox from "./icon/inbox.png";
 import iconAccount from "./icon/account.png";
 
+import iconSearch from "./icon/search.png";
+import iconPromo from "./icon/promo.png";
+
 export default function App() {
   return (
-    <View style={{ flex: 1 }}>
-      <View style={{ flex: 1, backgroundColor: "pink" }} />
+    <View
+      style={{
+        flex: 1,
+        paddingTop: Platform.OS === "ios" ? 20 : StatusBar.currentHeight + 15
+      }}
+    >
+      <View style={{ flex: 1, backgroundColor: "white" }}>
+        <View style={{ marginHorizontal: 17, flexDirection: "row" }}>
+          <View style={{ position: "relative", flex: 1 }}>
+            <TextInput
+              placeholder="what do you want to eat ?"
+              style={{
+                borderWidth: 1,
+                borderColor: "#E8E8E8",
+                borderRadius: 25,
+                height: 40,
+                fontSize: 13,
+                paddingLeft: 45,
+                paddingRight: 20,
+                backgroundColor: "white",
+                marginRight: 18
+              }}
+            />
+            <Image
+              source={iconSearch}
+              style={{ position: "absolute", top: 5, left: 12 }}
+            />
+          </View>
+          <View
+            style={{
+              width: 35,
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+          >
+            <Image source={iconPromo} />
+          </View>
+        </View>
+      </View>
       <View style={{ height: 54, flexDirection: "row" }}>
         <View
           style={{ alignItems: "center", justifyContent: "center", flex: 1 }}
