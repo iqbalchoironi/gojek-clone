@@ -44,6 +44,13 @@ import bannerImage from "./dummy/food-banner.jpg";
 import gojekImage from "./logo/gojek.png";
 import facebookConnectImage from "./dummy/facebook-connect.png";
 
+import gofoodImage from "./logo/go-food.png";
+import kfc from "./dummy/go-food-kfc.jpg";
+import bakmiGM from "./dummy/go-food-gm.jpg";
+import orins from "./dummy/go-food-orins.jpg";
+import pakboss from "./dummy/go-food-pak-boss.jpg";
+import banka from "./dummy/go-food-banka.jpg";
+
 export default function App() {
   return (
     <View
@@ -655,8 +662,184 @@ export default function App() {
               style={{
                 borderBottomColor: "#E8E9ED",
                 borderBottomWidth: 1,
-                marginTop: 16,
-                marginBottom: 20
+                marginTop: 16
+              }}
+            ></View>
+          </View>
+          {/* Nearby Go-Food Restauran */}
+          <View style={{ padding: 16 }}>
+            <View
+              style={{
+                height: 15,
+                width: 60,
+                marginLeft: 0
+              }}
+            >
+              <Image
+                source={gofoodImage}
+                style={{
+                  width: undefined,
+                  height: undefined,
+                  resizeMode: "contain",
+                  flex: 1
+                }}
+              ></Image>
+            </View>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                marginBottom: 16
+              }}
+            >
+              <Text
+                style={{ fontSize: 17, fontWeight: "bold", color: "#1C1C1C" }}
+              >
+                Nearby Restauran
+              </Text>
+              <Text
+                style={{ fontSize: 17, fontWeight: "bold", color: "#61A756" }}
+              >
+                See All
+              </Text>
+            </View>
+            <ScrollView horizontal style={{ flexDirection: "row" }}>
+              <View style={{ marginRight: 16 }}>
+                <View
+                  style={{
+                    height: 150,
+                    width: 150,
+                    borderRadius: 10,
+                    marginBottom: 12
+                  }}
+                >
+                  <Image
+                    source={kfc}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: "cover",
+                      flex: 1,
+                      borderRadius: 10
+                    }}
+                  ></Image>
+                </View>
+                <Text
+                  style={{ fontSize: 16, fontWeight: "bold", color: "#1C1C1C" }}
+                >
+                  KFC Dramaga
+                </Text>
+              </View>
+              <View style={{ marginRight: 16 }}>
+                <View
+                  style={{
+                    height: 150,
+                    width: 150,
+                    borderRadius: 10,
+                    marginBottom: 12
+                  }}
+                >
+                  <Image
+                    source={bakmiGM}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: "cover",
+                      flex: 1,
+                      borderRadius: 10
+                    }}
+                  ></Image>
+                </View>
+                <Text
+                  style={{ fontSize: 16, fontWeight: "bold", color: "#1C1C1C" }}
+                >
+                  Bakmi GM Dramaga
+                </Text>
+              </View>
+              <View style={{ marginRight: 16 }}>
+                <View
+                  style={{
+                    height: 150,
+                    width: 150,
+                    borderRadius: 10,
+                    marginBottom: 12
+                  }}
+                >
+                  <Image
+                    source={orins}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: "cover",
+                      flex: 1,
+                      borderRadius: 10
+                    }}
+                  ></Image>
+                </View>
+                <Text
+                  style={{ fontSize: 16, fontWeight: "bold", color: "#1C1C1C" }}
+                >
+                  Orins Dramaga
+                </Text>
+              </View>
+              <View style={{ marginRight: 16 }}>
+                <View
+                  style={{
+                    height: 150,
+                    width: 150,
+                    borderRadius: 10,
+                    marginBottom: 12
+                  }}
+                >
+                  <Image
+                    source={pakboss}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: "cover",
+                      flex: 1,
+                      borderRadius: 10
+                    }}
+                  ></Image>
+                </View>
+                <Text
+                  style={{ fontSize: 16, fontWeight: "bold", color: "#1C1C1C" }}
+                >
+                  Pak Boss Cibanteng
+                </Text>
+              </View>
+              <View style={{ marginRight: 16 }}>
+                <View
+                  style={{
+                    height: 150,
+                    width: 150,
+                    borderRadius: 10,
+                    marginBottom: 12
+                  }}
+                >
+                  <Image
+                    source={banka}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: "cover",
+                      flex: 1,
+                      borderRadius: 10
+                    }}
+                  ></Image>
+                </View>
+                <Text
+                  style={{ fontSize: 16, fontWeight: "bold", color: "#1C1C1C" }}
+                >
+                  Martabak Banka Cicaringin
+                </Text>
+              </View>
+            </ScrollView>
+            <View
+              style={{
+                borderBottomColor: "#E8E9ED",
+                borderBottomWidth: 1,
+                marginTop: 16
               }}
             ></View>
           </View>
