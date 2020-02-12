@@ -7,6 +7,7 @@ class NavBar extends Component {
     return (
       <View style={{ height: 54, flexDirection: "row" }}>
         <NavBarIcon
+          active
           title={"Home"}
           img={require("../../../assets/icon/home-active.png")}
         />

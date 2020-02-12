@@ -7,10 +7,9 @@ const NavBarIcon = props => {
       <Image style={{ width: 26, height: 26 }} source={props.img} />
       <Text
         style={{
-          color: "#545454",
+          color: props.active ? "green" : "#545454",
           fontSize: 10,
-          marginTop: 4,
-          color: "green"
+          marginTop: 4
         }}
       >
         {props.title}
