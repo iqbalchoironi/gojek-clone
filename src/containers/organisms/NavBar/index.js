@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View } from "react-native";
 import NavBarIcon from "../../../components/moleculs/NavBarIcon";
+import { withNavigation } from "react-navigation";
 
 class NavBar extends Component {
   render() {
@@ -10,10 +11,12 @@ class NavBar extends Component {
           active
           title={"Home"}
           img={require("../../../assets/icon/home-active.png")}
+          onPress={() => this.props.navigation.navigate("Home")}
         />
         <NavBarIcon
           title={"Orders"}
           img={require("../../../assets/icon/order.png")}
+          onPress={() => this.props.navigation.navigate("Orders")}
         />
         <NavBarIcon
           title={"Help"}
@@ -32,4 +35,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default withNavigation(NavBar);
